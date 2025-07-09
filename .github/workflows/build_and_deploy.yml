@@ -50,7 +50,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.json') }}-
       - name: Install dependencies
-        run: pnpm install
+        run: npm install -g pnpm && pnpm install
       - name: Build with Next.js
         run: pnpm build
       - name: Upload artifact
