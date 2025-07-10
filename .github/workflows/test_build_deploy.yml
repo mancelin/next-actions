@@ -54,6 +54,8 @@ jobs:
         with:
           node-version: "24"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: lint
+        run: pnpm lint
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
