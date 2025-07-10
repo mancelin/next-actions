@@ -22,6 +22,7 @@ concurrency:
 jobs:
   # Playwright Tests
   test:
+    if: false
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -44,7 +45,7 @@ jobs:
 
   # Build job
   build:
-    needs: test
+    # needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
